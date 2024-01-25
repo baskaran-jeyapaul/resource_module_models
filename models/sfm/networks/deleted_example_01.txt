@@ -1,0 +1,11 @@
+
+# Using deleted
+
+# configuration example prior to module invocation
+
+- name: Delete sfm Networks attributes
+  dellemc.sfm.sfm_network:
+    config:
+    state: deleted
+
+# configuration example after module invocation

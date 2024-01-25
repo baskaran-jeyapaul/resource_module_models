@@ -1,0 +1,11 @@
+
+# Using deleted
+
+# configuration example prior to module invocation
+
+- name: Delete sfm Fabrics attributes
+  dellemc.sfm.sfm_fabrics:
+    config:
+    state: deleted
+
+# configuration example after module invocation

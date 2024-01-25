@@ -1,0 +1,8 @@
+
+# Using merged
+
+# configuration example prior to module invocation
+
+#- name: Configure sfm Nodes attributes
+
+# configuration example after module invocation
