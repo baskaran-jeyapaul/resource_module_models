@@ -1,0 +1,8 @@
+
+# Using merged
+
+# configuration example prior to module invocation
+
+#- name: Configure sfm Tenants attributes
+
+# configuration example after module invocation
