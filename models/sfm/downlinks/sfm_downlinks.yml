@@ -1,0 +1,76 @@
+---
+GENERATOR_VERSION: '1.0'
+ANSIBLE_METADATA: |
+    {
+        'metadata_version': '1.1',
+        'status': ['preview'],
+        'supported_by': 'community',
+        'license': 'Apache 2.0'
+    }
+
+NETWORK_OS: sfm
+RESOURCE: downlinks
+COPYRIGHT: Copyright 2024 Dell Inc. or its subsidiaries. All Rights Reserved
+
+DOCUMENTATION: |
+  module: sfm_downlinks
+  version_added: 1.0.0
+  short_description: Manages Downlinks attributes of sfm configuration
+  description: This Module Manages Downlinks attributes of sfm configuration
+  author: Baskaran Jeyapaul
+  notes:
+    - Tested against sfm 1.0.0
+  options:
+    config:
+      description: List of sfm Downlinks attributes configuration
+      type: list
+      elements: dict
+      suboptions:
+        fabric_id:
+          type: str
+          description: Fabric Identifier
+        tenant_id:
+          type: str
+          description: Tenant Identifier
+        downlink_id:
+          type: str
+          description: Downlink Identifier
+        downlink_type:
+          type: str
+          description:
+          - Downlink Type
+          choices:
+          - Normal
+        downlink_name:
+          type: str
+          description: Downlink Name
+        untagged_network:
+          type: str
+          description: Untagged Network name
+        interface_list:
+          description: List of interfaces
+          type: list
+          elements: dict
+          suboptions:
+            name:
+              type: str
+              description: Interfaces list
+        network_list:
+          description: List of networks
+          type: list
+          elements: dict
+          suboptions:
+            name:
+              type: str
+              description: Networks list
+    state:
+      description:
+      - The state of the configuration after module completion.
+      type: str
+      choices:
+      - merged
+      - deleted
+      default: merged
+EXAMPLES:
+  - deleted_example_01.txt
+  - merged_example_01.txt
